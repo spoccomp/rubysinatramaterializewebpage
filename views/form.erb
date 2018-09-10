@@ -1,0 +1,42 @@
+<%# form.erb %>
+
+
+<div class="raised ">
+<h1 class="center z-depth-3 ">Welcome to Google Books</h1>
+</div>
+
+<%# <form  action="/" method="POST" >
+  <input type="text" name="book" placeholder="Enter book search here" />
+  <button>Search</button>
+</form> %>
+<div class="row center">
+    <img id="bookcase" src="bookcase.png" alt="book case">
+</div>
+<nav>
+    <div class="nav-wrapper">
+      <form  action="/" method="POST">
+        <div class="input-field">
+          <input id="search" name="book" type="search" placeholder="Enter book search here" required>
+          <label class="label-icon" for="search"><i class="material-icons">search</i></label>
+          <i class="material-icons">close</i>
+        </div>
+        
+      </form>
+    </div>
+  </nav>
+    
+    <div id="result"> 
+          <h3>You searched for the following book: <%= params[:book] %></h3>
+          <p class="nice">Title: <%=@title %></p>
+          <p class="nice">Author: <%=@author %></p>  
+          <p><%=@description %></p> 
+          
+          
+          <div class="row center">
+            <a href="<%=@book_link %>">
+              <img id="image" src='<%=@image %>' alt="book">
+            </a>
+          </div>
+    </div>
+
+

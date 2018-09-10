@@ -1,0 +1,15 @@
+<%# search_results %>
+
+<%# <% response = HTTParty.get("https://www.googleapis.com/books/v1/volumes?q=[#{params[:book]}]") %> 
+  
+
+ 
+<h1>Welcome to Google Books</h1>
+
+<h3>You searched for the following book: <%= params[:book] %></h3>
+<p>Title: <%=@title %></p>
+<p>Author: <%=@authors %></p>  
+<p><%=@description %></p> 
+<h4>Link:</h4>
+<p><%=@book_link %></p>
+<img src='<%=@image %>'>
