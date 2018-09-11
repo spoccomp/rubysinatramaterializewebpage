@@ -4,11 +4,6 @@
 <div class="raised ">
 <h1 class="center z-depth-3 ">Welcome to Google Books</h1>
 </div>
-
-<%# <form  action="/" method="POST" >
-  <input type="text" name="book" placeholder="Enter book search here" />
-  <button>Search</button>
-</form> %>
 <div class="row center">
     <img id="bookcase" src="bookcase.png" alt="book case">
 </div>
@@ -24,8 +19,7 @@
       </form>
     </div>
   </nav>
-    
-    <div id="result"> 
+      <div id="result"> 
           <h3>You searched for the following book: <%= params[:book] %></h3>
           <p class="nice">Title: <%=@title %></p>
           <p class="nice">Author: <%=@author %></p>  
